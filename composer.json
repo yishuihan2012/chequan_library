@@ -1,0 +1,14 @@
+{
+    "name": "chequan/library",
+    "description": "chquan company library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xuchengcheng",
+            "email": "1015571416@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
