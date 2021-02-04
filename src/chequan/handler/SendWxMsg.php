@@ -1,6 +1,6 @@
 <?php
 
-namespace chequan\library\core;
+namespace chequan\handler;
 /**
  * 
  */
