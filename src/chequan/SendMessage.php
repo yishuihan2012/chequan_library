@@ -1,7 +1,7 @@
 <?php
-namespace chequan\library;
+namespace chequan;
 
-use chequan\library\core\sendWxMsg;
+use chequan\handler\sendWxMsg;
 class SendMessage{
 	protected static function sendSms(){
 
