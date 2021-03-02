@@ -1,5 +1,5 @@
 <?php
-namespace chequan;
+namespace chequan\library;
 class Log{
 	protected  static  function log($data,$path='default',$name='log'){
 		if (extension_loaded('SeasLog')){
