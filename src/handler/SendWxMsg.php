@@ -25,7 +25,7 @@ class SendWxMsg
 	}
 	public static function getAccessToken($config){
                 $token_config = require_once(__DIR__."/../config/tokenConfig.php");
-                if(!$token_config || ($token_config['expire_time']<time())) {
+                if(!$token_config || $token_config===1 || ($token_config['expire_time']<time())) {
                     $res=Request::curl("https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={$config['corpid']}&corpsecret={$config['corpsecret']}",'GET');
                     if($res && $res=json_decode($res,true)){
                         $access_token=$res['access_token'];
