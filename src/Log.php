@@ -1,11 +1,13 @@
 <?php
 namespace chequan\library;
 class Log{
-	protected  static  function log($data,$path='default',$name='log'){
+	public  static  function log($data,$path='default',$name='log'){
 		if (extension_loaded('SeasLog')){
 			    SeasLog::info($data);
 		}else{
-			file_put_contents(__DIR__."/../storage/logs/".$path."/".date('Y').'/'.date('m-d')."/".$name.".log", '['.date('Y-m-d H:i:s').']'.$data.PHP_EOL);
+            $saveDir=__DIR__."/../../../../storage/logs/".$path."/".date('Y').'/'.date('m-d')."/";
+            if(!is_dir($saveDir)) mkdir($saveDir, 0777, true);
+            file_put_contents($saveDir.$name.".log", '['.date('Y-m-d H:i:s').']'.$data.PHP_EOL,FILE_APPEND);
 		}
 	}
 }
