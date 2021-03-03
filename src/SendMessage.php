@@ -7,7 +7,7 @@ class SendMessage{
 
 	}	
 	public static function sendWxMsg($user,$data){
-		sendWxMsg::send($user,$data);
+		sendWxMsg::sendText($user,$data);
 
 	}
 	public static function sendEmail(){
